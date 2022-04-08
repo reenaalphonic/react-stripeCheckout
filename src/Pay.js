@@ -5,6 +5,7 @@ import axios from "axios";
 import { loadStripe } from '@stripe/stripe-js';
 
 const stripePromise = loadStripe("pk_test_Key");
+
 const clickHandler = async(e) =>{
   const stripe = await stripePromise;
   const res = await axios({
@@ -39,11 +40,7 @@ const Message = ({ message }) => (
 );
 
 export default function Pay() {
-  const [message, setMessage] = useState("");
-
-  
-
-  
+  const [message, setMessage] = useState("");  
 
   useEffect(() => {
     // Check to see if this is a redirect back from Checkout
