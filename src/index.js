@@ -10,7 +10,7 @@ console.log(buildTimestamp)
 ReactDOM.render(
    <>
    <div>The page is last updated as of {buildTimestamp}</div>
-    <Pay />
+    <App/>
     </>,
   document.getElementById('root')
 );
